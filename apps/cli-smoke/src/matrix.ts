@@ -91,6 +91,7 @@ const styleCells: SetupCell[] = [
 	{ id: 'style-acli-maia', workspace: 'angular-cli', style: 'maia' },
 	{ id: 'style-nx-mira', workspace: 'nx', generateAs: 'entrypoint', buildable: true, style: 'mira' },
 	{ id: 'style-acli-luma', workspace: 'angular-cli', style: 'luma' },
+	{ id: 'style-nx-juralab', workspace: 'nx', generateAs: 'entrypoint', buildable: true, style: 'juralab' },
 ];
 
 export const setupMatrix: SetupCell[] = [

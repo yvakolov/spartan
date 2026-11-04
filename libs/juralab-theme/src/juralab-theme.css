@@ -1,0 +1,11 @@
+/* JuraLab DS · точка входа темы
+   Сгенерировано scripts/build-theme.py из tokens.json. Не правьте вручную. */
+
+/* Подключайте в styles.css после Tailwind и hlm-tailwind-preset.css.
+   Ненужный пресет можно убрать из списка. */
+@import './base.css';
+@import './presets/juralab.css';
+@import './presets/neutral.css';
+@import './presets/amber.css';
+@import './semantic.css';
+@import './components.css';
