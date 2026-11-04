@@ -1,0 +1,9 @@
+/* JuraLab DS · база: радиус и шрифты
+   Сгенерировано scripts/build-theme.py из tokens.json. Не правьте вручную. */
+
+:where(:root) {
+	/* единственный радиус, который стоит менять: шкала radius-* — множители от него */
+	--radius: 0.625rem;
+	--font-sans: Geist, ui-sans-serif, system-ui, sans-serif;
+	--font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, monospace;
+}

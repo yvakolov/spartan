@@ -1,0 +1,141 @@
+/* JuraLab DS · уровень 2, семантика
+   Сгенерировано scripts/build-theme.py из tokens.json. Не правьте вручную. */
+
+/* Селекторы в :where() — нулевая специфичность, любое ваше переопределение ниже по коду побеждает.
+   .dark и [data-preset] в селекторах нужны, чтобы var() пересчитывались во вложенном контейнере. */
+
+/* база: juralab, светлая схема */
+:where(:root, .dark, [data-preset]) {
+	--background: #ffffff;
+	--foreground: var(--neutral-12);
+	--card: #ffffff;
+	--card-foreground: var(--neutral-12);
+	--popover: #ffffff;
+	--popover-foreground: var(--neutral-12);
+	--primary: var(--brand-9);
+	--primary-foreground: var(--brand-contrast);
+	--primary-hover: var(--brand-10);
+	--link: var(--brand-11);
+	--secondary: var(--brand-a3);
+	--secondary-foreground: var(--brand-11);
+	--secondary-hover: var(--brand-a4);
+	--muted: var(--neutral-3);
+	--muted-foreground: var(--neutral-11);
+	--muted-hover: var(--neutral-4);
+	--muted-subtle: var(--neutral-a2);
+	--accent: var(--neutral-a3);
+	--accent-foreground: var(--neutral-12);
+	--destructive: var(--danger-11);
+	--destructive-subtle: var(--danger-a3);
+	--destructive-subtle-hover: var(--danger-a4);
+	--destructive-border: var(--danger-a8);
+	--destructive-ring: var(--danger-a5);
+	--border: var(--neutral-6);
+	--surface-border: var(--neutral-a5);
+	--input: var(--neutral-7);
+	--control: #ffffff00;
+	--control-subtle: var(--neutral-a2);
+	--control-hover: #ffffff00;
+	--control-disabled: var(--neutral-a3);
+	--outline: var(--background);
+	--outline-border: var(--border);
+	--outline-hover: var(--muted);
+	--ghost-hover: var(--muted);
+	--ring: var(--brand-9);
+	--ring-halo: var(--brand-a5);
+	--primary-subtle: var(--brand-a2);
+	--primary-subtle-border: var(--brand-a6);
+	--switch-unchecked: var(--input);
+	--switch-thumb-unchecked: var(--background);
+	--switch-thumb-checked: var(--background);
+	--thumb: #ffffff;
+	--tab-active: var(--background);
+	--tab-active-border: #ffffff00;
+	--tab-inactive: var(--neutral-11);
+	--kbd-tooltip: #ffffff33;
+	--overlay: #0000001a;
+	--bubble-tinted: var(--brand-3);
+	--bubble-tinted-hover: var(--brand-4);
+	--chart-1: #3e63dd;
+	--chart-2: #00a2c7;
+	--chart-3: #ffc53d;
+	--chart-4: #46a758;
+	--chart-5: #ab4aba;
+	--sidebar: var(--neutral-2);
+	--sidebar-foreground: var(--neutral-12);
+	--sidebar-foreground-muted: var(--neutral-11);
+	--sidebar-primary: var(--primary);
+	--sidebar-primary-foreground: var(--primary-foreground);
+	--sidebar-accent: var(--neutral-a3);
+	--sidebar-accent-foreground: var(--neutral-12);
+	--sidebar-border: var(--neutral-6);
+	--sidebar-ring: var(--ring);
+}
+
+/* тёмная схема (все пресеты) */
+:where(.dark, .dark [data-preset]) {
+	--background: var(--neutral-1);
+	--card: var(--neutral-2);
+	--popover: var(--neutral-2);
+	--destructive-subtle: var(--danger-a4);
+	--destructive-subtle-hover: var(--danger-a5);
+	--control: var(--neutral-a3);
+	--control-subtle: var(--neutral-a3);
+	--control-hover: var(--neutral-a4);
+	--control-disabled: var(--neutral-a4);
+	--outline: var(--neutral-a3);
+	--outline-border: var(--input);
+	--outline-hover: var(--neutral-a4);
+	--ghost-hover: var(--neutral-a3);
+	--primary-subtle: var(--brand-a3);
+	--primary-subtle-border: var(--brand-a5);
+	--switch-unchecked: var(--neutral-a6);
+	--switch-thumb-unchecked: var(--foreground);
+	--switch-thumb-checked: var(--primary-foreground);
+	--tab-active: var(--neutral-a3);
+	--tab-active-border: var(--input);
+	--kbd-tooltip: #00000033;
+	--bubble-tinted: var(--brand-4);
+	--bubble-tinted-hover: var(--brand-5);
+}
+
+/* пресет neutral: отличия от базы */
+:where([data-preset='neutral'], [data-preset='neutral'] .dark) {
+	--primary: var(--neutral-12);
+	--primary-foreground: var(--neutral-1);
+	--primary-hover: var(--neutral-11);
+	--link: var(--neutral-12);
+	--chart-1: oklch(0.646 0.222 41.116);
+	--chart-2: oklch(0.6 0.118 184.704);
+	--chart-3: oklch(0.398 0.07 227.392);
+	--chart-4: oklch(0.828 0.189 84.429);
+	--chart-5: oklch(0.769 0.188 70.08);
+}
+
+/* пресет neutral, тёмная схема */
+:where(.dark[data-preset='neutral'], .dark [data-preset='neutral'], [data-preset='neutral'] .dark) {
+	--chart-1: oklch(0.488 0.243 264.376);
+	--chart-2: oklch(0.696 0.17 162.48);
+	--chart-3: oklch(0.769 0.188 70.08);
+	--chart-4: oklch(0.627 0.265 303.9);
+	--chart-5: oklch(0.645 0.246 16.439);
+}
+
+/* пресет amber: отличия от базы */
+:where([data-preset='amber'], [data-preset='amber'] .dark) {
+	--secondary-foreground: var(--brand-12);
+	--ring: var(--brand-11);
+	--chart-1: #ffc53d;
+	--chart-2: #12a594;
+	--chart-3: #6e56cf;
+	--chart-4: #f76b15;
+	--chart-5: #46a758;
+}
+
+:where(:root) {
+	color-scheme: light;
+}
+
+:where(.dark) {
+	color-scheme: dark;
+}

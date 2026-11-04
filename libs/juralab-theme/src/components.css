@@ -1,0 +1,931 @@
+/* JuraLab DS · уровень 3, компонентные токены
+   Сгенерировано libs/juralab-theme/scripts/build-style.py вместе со style-juralab.css. Не правьте вручную.
+   Цвета ссылаются на семантику. Если схемам нужны разные ссылки, тёмное значение — в блоке .dark ниже
+   (как colorScheme у компонентных токенов PrimeNG). Размеры — на --spacing и --radius.
+   Переопределение для одного места, как dt в PrimeNG:
+     .checkout { --button-background: var(--brand-11); } */
+
+:where(:root, .dark, [data-preset]) {
+	/* Accordion */
+	--accordion-trigger-focus-ring: var(--ring-halo);
+	--accordion-trigger-focus-border-color: var(--ring);
+	--accordion-trigger-focus-after-border-color: var(--ring);
+	--accordion-trigger-icon-color: var(--muted-foreground);
+	/* Alert */
+	--alert-background: var(--card);
+	--alert-color: var(--card-foreground);
+	--alert-destructive-color: var(--destructive);
+	--alert-destructive-background: var(--card);
+	--alert-destructive-description-color: var(--destructive);
+	--alert-description-color: var(--muted-foreground);
+	/* Dialog (Dialog, Alert Dialog) */
+	--dialog-overlay-background: var(--overlay);
+	--dialog-content-background: var(--popover);
+	--dialog-content-color: var(--popover-foreground);
+	--dialog-content-ring: var(--surface-border);
+	--dialog-footer-background: var(--muted-subtle);
+	--dialog-description-color: var(--muted-foreground);
+	--dialog-description-hover-color: var(--foreground);
+	/* Alert Dialog */
+	--alert-dialog-media-background: var(--muted);
+	--alert-dialog-description-color: var(--muted-foreground);
+	--alert-dialog-description-hover-color: var(--foreground);
+	--alert-dialog-footer-background: var(--muted-subtle);
+	/* Listbox (Select, Combobox, Autocomplete) */
+	--listbox-content-background: var(--popover);
+	--listbox-content-color: var(--popover-foreground);
+	--listbox-content-ring: var(--surface-border);
+	--listbox-label-color: var(--muted-foreground);
+	--listbox-item-highlighted-background: var(--accent);
+	--listbox-item-highlighted-color: var(--accent-foreground);
+	--listbox-item-destructive-highlighted-color: var(--accent-foreground);
+	--listbox-empty-color: var(--muted-foreground);
+	--listbox-separator-background: var(--border);
+	--listbox-status-color: var(--muted-foreground);
+	--listbox-content-focus-border-color: var(--input);
+	--listbox-content-group-background: var(--control);
+	--listbox-content-group-border-color: var(--control);
+	--listbox-scroll-up-button-background: var(--popover);
+	--listbox-scroll-down-button-background: var(--popover);
+	/* Avatar */
+	--avatar-fallback-background: var(--muted);
+	--avatar-fallback-color: var(--muted-foreground);
+	--avatar-badge-background: var(--primary);
+	--avatar-badge-color: var(--primary-foreground);
+	--avatar-badge-ring: var(--background);
+	--avatar-group-count-background: var(--muted);
+	--avatar-group-count-color: var(--muted-foreground);
+	/* Badge */
+	--badge-background: var(--primary);
+	--badge-color: var(--primary-foreground);
+	--badge-hover-background: var(--primary-hover);
+	--badge-secondary-background: var(--secondary);
+	--badge-secondary-color: var(--secondary-foreground);
+	--badge-secondary-hover-background: var(--secondary-hover);
+	--badge-outline-border-color: var(--border);
+	--badge-outline-color: var(--foreground);
+	--badge-outline-hover-background: var(--muted);
+	--badge-outline-hover-color: var(--muted-foreground);
+	--badge-destructive-background: var(--destructive-subtle);
+	--badge-destructive-hover-background: var(--destructive-subtle-hover);
+	--badge-destructive-focus-ring: var(--destructive-ring);
+	--badge-destructive-color: var(--destructive);
+	--badge-ghost-hover-background: var(--ghost-hover);
+	--badge-ghost-hover-color: var(--muted-foreground);
+	--badge-link-color: var(--link);
+	/* Breadcrumb */
+	--breadcrumb-list-color: var(--muted-foreground);
+	--breadcrumb-link-hover-color: var(--foreground);
+	--breadcrumb-page-color: var(--foreground);
+	/* Button */
+	--button-focus-border-color: var(--ring);
+	--button-focus-ring: var(--ring-halo);
+	--button-invalid-ring: var(--destructive-ring);
+	--button-invalid-border-color: var(--destructive);
+	--button-background: var(--primary);
+	--button-color: var(--primary-foreground);
+	--button-hover-background: var(--primary-hover);
+	--button-outline-border-color: var(--outline-border);
+	--button-outline-background: var(--outline);
+	--button-outline-hover-background: var(--outline-hover);
+	--button-outline-hover-color: var(--foreground);
+	--button-outline-expanded-background: var(--muted);
+	--button-outline-expanded-color: var(--foreground);
+	--button-secondary-background: var(--secondary);
+	--button-secondary-color: var(--secondary-foreground);
+	--button-secondary-hover-background: var(--secondary-hover);
+	--button-secondary-expanded-background: var(--secondary);
+	--button-secondary-expanded-color: var(--secondary-foreground);
+	--button-ghost-hover-background: var(--ghost-hover);
+	--button-ghost-hover-color: var(--foreground);
+	--button-ghost-expanded-background: var(--muted);
+	--button-ghost-expanded-color: var(--foreground);
+	--button-destructive-background: var(--destructive-subtle);
+	--button-destructive-hover-background: var(--destructive-subtle-hover);
+	--button-destructive-focus-ring: var(--destructive-ring);
+	--button-destructive-color: var(--destructive);
+	--button-destructive-focus-border-color: var(--destructive-border);
+	--button-link-color: var(--link);
+	/* Button Group */
+	--button-group-text-background: var(--muted);
+	--button-group-separator-background: var(--input);
+	/* Card */
+	--card-ring: var(--surface-border);
+	--card-background: var(--card);
+	--card-color: var(--card-foreground);
+	--card-description-color: var(--muted-foreground);
+	--card-footer-background: var(--muted-subtle);
+	/* Checkbox */
+	--checkbox-border-color: var(--input);
+	--checkbox-background: var(--control);
+	--checkbox-checked-background: var(--primary);
+	--checkbox-checked-color: var(--primary-foreground);
+	--checkbox-checked-border-color: var(--primary);
+	--checkbox-invalid-checked-border-color: var(--primary);
+	--checkbox-invalid-border-color: var(--destructive);
+	--checkbox-focus-border-color: var(--ring);
+	--checkbox-focus-ring: var(--ring-halo);
+	--checkbox-invalid-ring: var(--destructive-ring);
+	/* Code Block */
+	--code-block-focus-ring: var(--ring-halo);
+	--code-block-border-color: var(--input);
+	--code-block-color: var(--foreground);
+	--code-block-background: var(--control);
+	--code-block-focus-border-color: var(--ring);
+	--code-block-destructive-border-color: var(--destructive-border);
+	--code-block-destructive-color: var(--destructive);
+	--code-block-header-color: var(--muted-foreground);
+	--code-block-header-destructive-color: var(--destructive);
+	--code-block-footer-color: var(--muted-foreground);
+	--code-block-title-color: var(--foreground);
+	--code-block-title-destructive-color: var(--destructive);
+	--code-block-actions-background: var(--background);
+	--code-block-actions-ring: var(--surface-border);
+	--code-block-line-before-color: var(--muted-foreground);
+	--code-block-line-after-color: var(--muted-foreground);
+	--code-block-line-highlighted-background: var(--muted);
+	--code-block-line-added-background: var(--muted);
+	--code-block-line-removed-background: var(--destructive-subtle);
+	--code-block-line-removed-after-color: var(--destructive);
+	/* Combobox */
+	--combobox-trigger-placeholder-color: var(--muted-foreground);
+	--combobox-trigger-icon-color: var(--muted-foreground);
+	--combobox-chips-background: var(--control);
+	--combobox-chips-border-color: var(--input);
+	--combobox-chips-focus-border-color: var(--ring);
+	--combobox-chips-focus-ring: var(--ring-halo);
+	--combobox-chips-invalid-ring: var(--destructive-ring);
+	--combobox-chips-invalid-border-color: var(--destructive);
+	--combobox-chip-background: var(--muted);
+	--combobox-chip-color: var(--foreground);
+	--combobox-chip-input-placeholder-color: var(--muted-foreground);
+	/* Command */
+	--command-background: var(--popover);
+	--command-color: var(--popover-foreground);
+	--command-input-group-background: var(--control);
+	--command-input-group-border-color: var(--control);
+	--command-group-color: var(--foreground);
+	--command-group-label-color: var(--muted-foreground);
+	--command-separator-background: var(--border);
+	--command-item-selected-background: var(--muted);
+	--command-item-selected-color: var(--foreground);
+	--command-shortcut-color: var(--muted-foreground);
+	--command-shortcut-selected-color: var(--foreground);
+	/* Date Picker */
+	--date-picker-trigger-placeholder-color: var(--muted-foreground);
+	/* Drawer */
+	--drawer-overlay-background: var(--overlay);
+	--drawer-content-background: var(--background);
+	--drawer-handle-background: var(--muted);
+	--drawer-title-color: var(--foreground);
+	--drawer-description-color: var(--muted-foreground);
+	/* Menu (Dropdown Menu, Context Menu, Menubar) */
+	--menu-content-ring: var(--surface-border);
+	--menu-content-background: var(--popover);
+	--menu-content-color: var(--popover-foreground);
+	--menu-item-hover-background: var(--accent);
+	--menu-item-focus-background: var(--accent);
+	--menu-item-hover-color: var(--accent-foreground);
+	--menu-item-focus-color: var(--accent-foreground);
+	--menu-item-destructive-color: var(--destructive);
+	--menu-item-destructive-hover-background: var(--destructive-subtle);
+	--menu-item-destructive-focus-background: var(--destructive-subtle);
+	--menu-item-destructive-hover-color: var(--destructive);
+	--menu-item-destructive-focus-color: var(--destructive);
+	--menu-item-destructive-icon-color: var(--destructive);
+	--dropdown-menu-item-destructive-hover-color: var(--accent-foreground);
+	--dropdown-menu-item-destructive-focus-color: var(--accent-foreground);
+	--menu-checkbox-item-hover-background: var(--accent);
+	--menu-checkbox-item-focus-background: var(--accent);
+	--menu-checkbox-item-hover-color: var(--accent-foreground);
+	--menu-checkbox-item-focus-color: var(--accent-foreground);
+	--menu-radio-item-hover-background: var(--accent);
+	--menu-radio-item-focus-background: var(--accent);
+	--menu-radio-item-hover-color: var(--accent-foreground);
+	--menu-radio-item-focus-color: var(--accent-foreground);
+	--menu-label-color: var(--muted-foreground);
+	--menu-separator-background: var(--border);
+	--menu-shortcut-color: var(--muted-foreground);
+	--menu-shortcut-focus-color: var(--accent-foreground);
+	--menu-sub-content-ring: var(--surface-border);
+	--menu-sub-content-background: var(--popover);
+	--menu-sub-content-color: var(--popover-foreground);
+	/* Empty */
+	--empty-media-icon-background: var(--muted);
+	--empty-media-icon-color: var(--foreground);
+	/* Marker */
+	--marker-color: var(--muted-foreground);
+	--marker-separator-before-background: var(--border);
+	--marker-separator-after-background: var(--border);
+	--marker-border-color: var(--border);
+	/* Message */
+	--message-avatar-background: var(--muted);
+	--message-header-color: var(--muted-foreground);
+	--message-footer-color: var(--muted-foreground);
+	/* Bubble */
+	--bubble-reactions-background: var(--muted);
+	--bubble-reactions-ring: var(--card);
+	--bubble-content-background: var(--primary);
+	--bubble-content-color: var(--primary-foreground);
+	--bubble-content-hover-background: var(--primary-hover);
+	--bubble-secondary-content-background: var(--secondary);
+	--bubble-secondary-content-color: var(--secondary-foreground);
+	--bubble-secondary-content-hover-background: var(--secondary-hover);
+	--bubble-muted-content-background: var(--muted);
+	--bubble-muted-content-hover-background: var(--muted-hover);
+	--bubble-tinted-content-color: var(--foreground);
+	--bubble-tinted-content-background: var(--bubble-tinted);
+	--bubble-tinted-content-hover-background: var(--bubble-tinted-hover);
+	--bubble-outline-content-border-color: var(--border);
+	--bubble-outline-content-background: var(--background);
+	--bubble-outline-content-hover-background: var(--muted);
+	--bubble-outline-content-hover-color: var(--foreground);
+	--bubble-ghost-content-hover-background: var(--ghost-hover);
+	--bubble-ghost-content-hover-color: var(--foreground);
+	--bubble-destructive-content-background: var(--destructive-subtle);
+	--bubble-destructive-content-color: var(--destructive);
+	--bubble-destructive-content-hover-background: var(--destructive-subtle-hover);
+	/* Attachment */
+	--attachment-background: var(--card);
+	--attachment-color: var(--card-foreground);
+	--attachment-media-background: var(--muted);
+	--attachment-media-color: var(--foreground);
+	--attachment-media-icon-background: var(--muted);
+	--attachment-description-color: var(--muted-foreground);
+	/* Field */
+	--field-invalid-color: var(--destructive);
+	--field-label-checked-background: var(--primary-subtle);
+	--field-label-checked-border-color: var(--primary-subtle-border);
+	--field-description-color: var(--muted-foreground);
+	--field-separator-content-color: var(--muted-foreground);
+	--field-error-color: var(--destructive);
+	/* Hover Card */
+	--hover-card-content-ring: var(--surface-border);
+	--hover-card-content-background: var(--popover);
+	--hover-card-content-color: var(--popover-foreground);
+	/* Input */
+	--input-background: var(--control);
+	--input-border-color: var(--input);
+	--input-focus-border-color: var(--ring);
+	--input-focus-ring: var(--ring-halo);
+	--input-invalid-ring: var(--destructive-ring);
+	--input-invalid-border-color: var(--destructive);
+	--input-disabled-background: var(--control-disabled);
+	/* Input OTP */
+	--input-otp-group-invalid-ring: var(--destructive-ring);
+	--input-otp-group-invalid-border-color: var(--destructive);
+	--input-otp-slot-background: var(--control);
+	--input-otp-slot-border-color: var(--input);
+	--input-otp-slot-active-border-color: var(--ring);
+	--input-otp-slot-active-ring: var(--ring-halo);
+	--input-otp-slot-active-invalid-ring: var(--destructive-ring);
+	--input-otp-slot-invalid-border-color: var(--destructive);
+	--input-otp-slot-active-invalid-border-color: var(--destructive);
+	--input-otp-caret-line-background: var(--foreground);
+	/* Item */
+	--item-hover-background: var(--muted);
+	--item-outline-border-color: var(--border);
+	--item-muted-background: var(--muted-subtle);
+	--item-description-color: var(--muted-foreground);
+	/* Kbd */
+	--kbd-background: var(--muted);
+	--kbd-color: var(--muted-foreground);
+	--kbd-in-content-background: var(--kbd-tooltip);
+	--kbd-in-content-color: var(--background);
+	/* Menubar */
+	--menubar-background: var(--background);
+	--menubar-trigger-hover-background: var(--muted);
+	--menubar-trigger-expanded-background: var(--muted);
+	/* Navigation Menu */
+	--navigation-menu-trigger-background: var(--background);
+	--navigation-menu-trigger-hover-background: var(--muted);
+	--navigation-menu-trigger-focus-background: var(--muted);
+	--navigation-menu-trigger-open-hover-background: var(--muted);
+	--navigation-menu-trigger-open-focus-background: var(--muted);
+	--navigation-menu-trigger-open-background: var(--muted-subtle);
+	--navigation-menu-trigger-focus-ring: var(--ring-halo);
+	--navigation-menu-link-active-focus-background: var(--muted);
+	--navigation-menu-link-active-hover-background: var(--muted);
+	--navigation-menu-link-active-background: var(--muted-subtle);
+	--navigation-menu-link-focus-ring: var(--ring-halo);
+	--navigation-menu-link-hover-background: var(--muted);
+	--navigation-menu-link-focus-background: var(--muted);
+	--navigation-menu-popup-background: var(--popover);
+	--navigation-menu-popup-color: var(--popover-foreground);
+	--navigation-menu-popup-ring: var(--surface-border);
+	/* Native Select */
+	--native-select-border-color: var(--input);
+	--native-select-placeholder-color: var(--muted-foreground);
+	--native-select-selection-background: var(--primary);
+	--native-select-selection-color: var(--primary-foreground);
+	--native-select-background: var(--control);
+	--native-select-hover-background: var(--control-hover);
+	--native-select-focus-border-color: var(--ring);
+	--native-select-focus-ring: var(--ring-halo);
+	--native-select-invalid-ring: var(--destructive-ring);
+	--native-select-invalid-border-color: var(--destructive);
+	--native-select-icon-color: var(--muted-foreground);
+	/* Popover */
+	--popover-content-background: var(--popover);
+	--popover-content-color: var(--popover-foreground);
+	--popover-content-ring: var(--surface-border);
+	--popover-description-color: var(--muted-foreground);
+	/* Progress */
+	--progress-background: var(--muted);
+	--progress-track-background: var(--muted);
+	--progress-indicator-background: var(--primary);
+	--progress-value-color: var(--muted-foreground);
+	/* Questionnaire */
+	--questionnaire-choice-border-color: var(--input);
+	--questionnaire-choice-hover-background: var(--muted-subtle);
+	--questionnaire-choice-focus-border-color: var(--ring);
+	--questionnaire-choice-focus-ring: var(--ring-halo);
+	--questionnaire-choice-invalid-border-color: var(--destructive);
+	--questionnaire-choice-background: var(--control-subtle);
+	--questionnaire-choice-checked-border-color: var(--primary-subtle-border);
+	--questionnaire-choice-checked-background: var(--muted);
+	--questionnaire-choice-indicator-border-color: var(--input);
+	--questionnaire-choice-indicator-checked-border-color: var(--primary);
+	--questionnaire-choice-indicator-checked-background: var(--primary);
+	--questionnaire-choice-indicator-checked-color: var(--primary-foreground);
+	--questionnaire-choice-indicator-background: var(--control);
+	--questionnaire-choice-indicator-dot-background: var(--primary-foreground);
+	--questionnaire-choice-description-color: var(--muted-foreground);
+	--questionnaire-shortcut-border-color: var(--input);
+	--questionnaire-shortcut-background: var(--background);
+	--questionnaire-shortcut-color: var(--muted-foreground);
+	--questionnaire-input-background: var(--control);
+	--questionnaire-input-border-color: var(--input);
+	--questionnaire-input-focus-border-color: var(--ring);
+	--questionnaire-input-focus-ring: var(--ring-halo);
+	--questionnaire-input-invalid-ring: var(--destructive-ring);
+	--questionnaire-input-invalid-border-color: var(--destructive);
+	--questionnaire-input-disabled-background: var(--control-disabled);
+	/* Radio Group */
+	--radio-group-item-border-color: var(--input);
+	--radio-group-item-background: var(--control);
+	--radio-group-item-checked-background: var(--primary);
+	--radio-group-item-checked-color: var(--primary-foreground);
+	--radio-group-item-checked-border-color: var(--primary);
+	--radio-group-item-invalid-checked-border-color: var(--primary);
+	--radio-group-item-invalid-border-color: var(--destructive);
+	--radio-group-item-focus-border-color: var(--ring);
+	--radio-group-item-focus-ring: var(--ring-halo);
+	--radio-group-item-invalid-ring: var(--destructive-ring);
+	--radio-group-indicator-icon-background: var(--primary-foreground);
+	/* Resizable */
+	--resizable-handle-icon-background: var(--border);
+	/* Select */
+	--select-trigger-border-color: var(--input);
+	--select-trigger-placeholder-color: var(--muted-foreground);
+	--select-trigger-background: var(--control);
+	--select-trigger-hover-background: var(--control-hover);
+	--select-trigger-focus-border-color: var(--ring);
+	--select-trigger-focus-ring: var(--ring-halo);
+	--select-trigger-invalid-ring: var(--destructive-ring);
+	--select-trigger-invalid-border-color: var(--destructive);
+	--select-trigger-icon-color: var(--muted-foreground);
+	/* Separator */
+	--separator-background: var(--border);
+	/* Sheet */
+	--sheet-overlay-background: var(--overlay);
+	--sheet-content-background: var(--popover);
+	--sheet-content-color: var(--popover-foreground);
+	--sheet-title-color: var(--foreground);
+	--sheet-description-color: var(--muted-foreground);
+	/* Sidebar */
+	--sidebar-inner-background: var(--sidebar);
+	--sidebar-inner-floating-ring: var(--sidebar-border);
+	--sidebar-rail-hover-after-background: var(--sidebar-border);
+	--sidebar-inset-background: var(--background);
+	--sidebar-input-background: var(--background);
+	--sidebar-separator-background: var(--sidebar-border);
+	--sidebar-group-label-color: var(--sidebar-foreground-muted);
+	--sidebar-group-label-ring: var(--sidebar-ring);
+	--sidebar-group-action-color: var(--sidebar-foreground);
+	--sidebar-group-action-ring: var(--sidebar-ring);
+	--sidebar-group-action-hover-background: var(--sidebar-accent);
+	--sidebar-group-action-hover-color: var(--sidebar-accent-foreground);
+	--sidebar-menu-button-ring: var(--sidebar-ring);
+	--sidebar-menu-button-hover-background: var(--sidebar-accent);
+	--sidebar-menu-button-hover-color: var(--sidebar-accent-foreground);
+	--sidebar-menu-button-pressed-background: var(--sidebar-accent);
+	--sidebar-menu-button-pressed-color: var(--sidebar-accent-foreground);
+	--sidebar-menu-button-active-background: var(--sidebar-accent);
+	--sidebar-menu-button-active-color: var(--sidebar-accent-foreground);
+	--sidebar-menu-button-open-hover-background: var(--sidebar-accent);
+	--sidebar-menu-button-open-hover-color: var(--sidebar-accent-foreground);
+	--sidebar-menu-button-outline-hover-shadow-color: var(--sidebar-accent);
+	--sidebar-menu-button-outline-shadow-color: var(--sidebar-border);
+	--sidebar-menu-button-outline-background: var(--background);
+	--sidebar-menu-button-outline-hover-background: var(--sidebar-accent);
+	--sidebar-menu-button-outline-hover-color: var(--sidebar-accent-foreground);
+	--sidebar-menu-action-color: var(--sidebar-foreground);
+	--sidebar-menu-action-ring: var(--sidebar-ring);
+	--sidebar-menu-action-hover-background: var(--sidebar-accent);
+	--sidebar-menu-action-hover-color: var(--sidebar-accent-foreground);
+	--sidebar-menu-badge-color: var(--sidebar-foreground);
+	--sidebar-menu-badge-hover-color: var(--sidebar-accent-foreground);
+	--sidebar-menu-badge-active-color: var(--sidebar-accent-foreground);
+	--sidebar-menu-sub-border-color: var(--sidebar-border);
+	--sidebar-menu-sub-button-color: var(--sidebar-foreground);
+	--sidebar-menu-sub-button-ring: var(--sidebar-ring);
+	--sidebar-menu-sub-button-hover-background: var(--sidebar-accent);
+	--sidebar-menu-sub-button-hover-color: var(--sidebar-accent-foreground);
+	--sidebar-menu-sub-button-pressed-background: var(--sidebar-accent);
+	--sidebar-menu-sub-button-pressed-color: var(--sidebar-accent-foreground);
+	--sidebar-menu-sub-button-icon-color: var(--sidebar-accent-foreground);
+	--sidebar-menu-sub-button-active-background: var(--sidebar-accent);
+	--sidebar-menu-sub-button-active-color: var(--sidebar-accent-foreground);
+	/* Skeleton */
+	--skeleton-background: var(--muted);
+	/* Slider */
+	--slider-track-background: var(--muted);
+	--slider-range-background: var(--primary);
+	--slider-thumb-border-color: var(--ring);
+	--slider-thumb-ring: var(--ring-halo);
+	--slider-thumb-background: var(--thumb);
+	/* Switch */
+	--switch-checked-background: var(--primary);
+	--switch-unchecked-background: var(--input);
+	--switch-focus-border-color: var(--ring);
+	--switch-focus-ring: var(--ring-halo);
+	--switch-invalid-ring: var(--destructive-ring);
+	--switch-invalid-border-color: var(--destructive);
+	--switch-thumb-background: var(--background);
+	--switch-thumb-unchecked-background: var(--foreground);
+	--switch-thumb-checked-background: var(--primary-foreground);
+	/* Table */
+	--table-footer-background: var(--muted-subtle);
+	--table-row-hover-background: var(--muted-subtle);
+	--table-row-selected-background: var(--muted);
+	--table-head-color: var(--foreground);
+	--table-caption-color: var(--muted-foreground);
+	/* Textarea */
+	--textarea-border-color: var(--input);
+	--textarea-background: var(--control);
+	--textarea-focus-border-color: var(--ring);
+	--textarea-focus-ring: var(--ring-halo);
+	--textarea-invalid-ring: var(--destructive-ring);
+	--textarea-invalid-border-color: var(--destructive);
+	--textarea-disabled-background: var(--control-disabled);
+	/* Toggle */
+	--toggle-hover-color: var(--foreground);
+	--toggle-on-background: var(--muted);
+	--toggle-focus-border-color: var(--ring);
+	--toggle-focus-ring: var(--ring-halo);
+	--toggle-invalid-ring: var(--destructive-ring);
+	--toggle-invalid-border-color: var(--destructive);
+	--toggle-outline-border-color: var(--input);
+	--toggle-outline-hover-background: var(--muted);
+	/* Trace */
+	--trace-focus-ring: var(--ring-halo);
+	--trace-collapsible-trigger-focus-ring: var(--ring-halo);
+	/* Input Group */
+	--input-group-border-color: var(--input);
+	--input-group-background: var(--control);
+	--input-group-focus-border-color: var(--ring);
+	--input-group-focus-ring: var(--ring-halo);
+	--input-group-invalid-ring: var(--destructive-ring);
+	--input-group-invalid-border-color: var(--destructive);
+	--input-group-disabled-background: var(--control-disabled);
+	--input-group-addon-color: var(--muted-foreground);
+	--input-group-text-color: var(--muted-foreground);
+}
+
+/* Тёмная схема: только токены, которым нужна другая ссылка */
+:where(.dark, .dark [data-preset]) {
+	--button-invalid-border-color: var(--destructive-border);
+	--checkbox-invalid-border-color: var(--destructive-border);
+	--combobox-chips-invalid-border-color: var(--destructive-border);
+	--bubble-outline-content-hover-background: var(--control);
+	--field-label-checked-border-color: var(--primary-subtle);
+	--input-invalid-border-color: var(--destructive-border);
+	--native-select-invalid-border-color: var(--destructive-border);
+	--questionnaire-input-invalid-border-color: var(--destructive-border);
+	--radio-group-item-invalid-border-color: var(--destructive-border);
+	--select-trigger-invalid-border-color: var(--destructive-border);
+	--switch-unchecked-background: var(--control-disabled);
+	--switch-invalid-border-color: var(--destructive-border);
+	--textarea-invalid-border-color: var(--destructive-border);
+}
+
+/* Размеры */
+:where(:root) {
+	/* Accordion */
+	--accordion-trigger-radius: var(--radius);
+	--accordion-trigger-padding-y: calc(var(--spacing) * 2.5);
+	/* Alert */
+	--alert-gap: calc(var(--spacing) * 0.5);
+	--alert-radius: var(--radius);
+	--alert-padding-x: calc(var(--spacing) * 2.5);
+	--alert-padding-y: calc(var(--spacing) * 2);
+	/* Dialog (Dialog, Alert Dialog) */
+	--dialog-content-gap: calc(var(--spacing) * 4);
+	--dialog-content-radius: calc(var(--radius) * 1.4);
+	--dialog-content-padding: calc(var(--spacing) * 4);
+	--dialog-header-gap: calc(var(--spacing) * 2);
+	--dialog-footer-padding: calc(var(--spacing) * 4);
+	/* Alert Dialog */
+	--alert-dialog-header-gap: calc(var(--spacing) * 1.5);
+	--alert-dialog-media-size: calc(var(--spacing) * 10);
+	--alert-dialog-media-radius: calc(var(--radius) * 0.8);
+	--alert-dialog-footer-padding: calc(var(--spacing) * 4);
+	/* Listbox (Select, Combobox, Autocomplete) */
+	--listbox-content-radius: var(--radius);
+	--listbox-label-padding-x: calc(var(--spacing) * 2);
+	--listbox-label-padding-y: calc(var(--spacing) * 1.5);
+	--listbox-item-gap: calc(var(--spacing) * 2);
+	--listbox-item-radius: calc(var(--radius) * 0.8);
+	--listbox-item-padding-y: calc(var(--spacing) * 1);
+	--listbox-empty-padding-y: calc(var(--spacing) * 2);
+	--listbox-list-padding: calc(var(--spacing) * 1);
+	--listbox-separator-height: 1px;
+	--listbox-status-gap: calc(var(--spacing) * 2);
+	--listbox-status-padding-x: calc(var(--spacing) * 2.5);
+	--listbox-status-padding-y: calc(var(--spacing) * 2);
+	--select-label-padding-x: calc(var(--spacing) * 1.5);
+	--select-label-padding-y: calc(var(--spacing) * 1);
+	--select-item-gap: calc(var(--spacing) * 1.5);
+	--listbox-group-padding: calc(var(--spacing) * 1);
+	--listbox-scroll-up-button-padding-y: calc(var(--spacing) * 1);
+	--listbox-scroll-down-button-padding-y: calc(var(--spacing) * 1);
+	/* Avatar */
+	--avatar-size: calc(var(--spacing) * 8);
+	--avatar-radius: calc(infinity * 1px);
+	--avatar-fallback-radius: calc(infinity * 1px);
+	--avatar-image-radius: calc(infinity * 1px);
+	--avatar-group-count-size: calc(var(--spacing) * 8);
+	--avatar-group-count-radius: calc(infinity * 1px);
+	/* Badge */
+	--badge-height: calc(var(--spacing) * 5);
+	--badge-gap: calc(var(--spacing) * 1);
+	--badge-radius: calc(var(--radius) * 2.6);
+	--badge-padding-x: calc(var(--spacing) * 2);
+	--badge-padding-y: calc(var(--spacing) * 0.5);
+	/* Breadcrumb */
+	--breadcrumb-list-gap: calc(var(--spacing) * 1.5);
+	--breadcrumb-item-gap: calc(var(--spacing) * 1);
+	--breadcrumb-ellipsis-size: calc(var(--spacing) * 5);
+	/* Button */
+	--button-radius: var(--radius);
+	--button-xs-height: calc(var(--spacing) * 6);
+	--button-xs-gap: calc(var(--spacing) * 1);
+	--button-xs-padding-x: calc(var(--spacing) * 2);
+	--button-sm-height: calc(var(--spacing) * 7);
+	--button-sm-gap: calc(var(--spacing) * 1);
+	--button-sm-padding-x: calc(var(--spacing) * 2.5);
+	--button-height: calc(var(--spacing) * 8);
+	--button-gap: calc(var(--spacing) * 1.5);
+	--button-padding-x: calc(var(--spacing) * 2.5);
+	--button-lg-height: calc(var(--spacing) * 9);
+	--button-lg-gap: calc(var(--spacing) * 1.5);
+	--button-lg-padding-x: calc(var(--spacing) * 2.5);
+	--button-icon-xs-size: calc(var(--spacing) * 6);
+	--button-icon-sm-size: calc(var(--spacing) * 7);
+	--button-icon-size: calc(var(--spacing) * 8);
+	--button-icon-lg-size: calc(var(--spacing) * 9);
+	/* Button Group */
+	--button-group-text-gap: calc(var(--spacing) * 2);
+	--button-group-text-radius: var(--radius);
+	--button-group-text-padding-x: calc(var(--spacing) * 2.5);
+	/* Calendar */
+	--calendar-padding: calc(var(--spacing) * 2);
+	--calendar-caption-label-height: calc(var(--spacing) * 6);
+	/* Card */
+	--card-radius: calc(var(--radius) * 1.4);
+	--card-header-gap: calc(var(--spacing) * 1);
+	/* Carousel */
+	--carousel-previous-radius: calc(infinity * 1px);
+	--carousel-next-radius: calc(infinity * 1px);
+	/* Checkbox */
+	--checkbox-size: calc(var(--spacing) * 4);
+	/* Code Block */
+	--code-block-radius: var(--radius);
+	--code-block-header-gap: calc(var(--spacing) * 2);
+	--code-block-header-padding-x: calc(var(--spacing) * 3);
+	--code-block-footer-gap: calc(var(--spacing) * 2);
+	--code-block-footer-padding-x: calc(var(--spacing) * 3);
+	--code-block-actions-gap: calc(var(--spacing) * 1);
+	--code-block-content-padding-x: calc(var(--spacing) * 3);
+	--code-block-content-padding-y: calc(var(--spacing) * 3);
+	--code-block-line-padding-x: calc(var(--spacing) * 3);
+	/* Combobox */
+	--combobox-chips-min-height: calc(var(--spacing) * 8);
+	--combobox-chips-gap: calc(var(--spacing) * 1);
+	--combobox-chips-radius: var(--radius);
+	--combobox-chips-padding-x: calc(var(--spacing) * 2.5);
+	--combobox-chips-padding-y: calc(var(--spacing) * 1);
+	--combobox-chip-gap: calc(var(--spacing) * 1);
+	--combobox-chip-radius: calc(var(--radius) * 0.6);
+	--combobox-chip-padding-x: calc(var(--spacing) * 1.5);
+	--combobox-placeholder-gap: calc(var(--spacing) * 2);
+	/* Command */
+	--command-radius: calc(var(--radius) * 1.4);
+	--command-padding: calc(var(--spacing) * 1);
+	--command-input-wrapper-padding: calc(var(--spacing) * 1);
+	--command-empty-padding-y: calc(var(--spacing) * 6);
+	--command-group-padding: calc(var(--spacing) * 1);
+	--command-separator-height: 1px;
+	--command-item-gap: calc(var(--spacing) * 2);
+	--command-item-radius: calc(var(--radius) * 0.6);
+	--command-item-padding-x: calc(var(--spacing) * 2);
+	--command-item-padding-y: calc(var(--spacing) * 1.5);
+	/* Drawer */
+	--drawer-handle-height: calc(var(--spacing) * 1);
+	--drawer-handle-radius: calc(infinity * 1px);
+	--drawer-header-gap: calc(var(--spacing) * 0.5);
+	--drawer-header-padding: calc(var(--spacing) * 4);
+	--drawer-footer-gap: calc(var(--spacing) * 2);
+	--drawer-footer-padding: calc(var(--spacing) * 4);
+	/* Menu (Dropdown Menu, Context Menu, Menubar) */
+	--menu-content-radius: var(--radius);
+	--menu-content-padding: calc(var(--spacing) * 1);
+	--menu-item-gap: calc(var(--spacing) * 1.5);
+	--menu-item-radius: calc(var(--radius) * 0.8);
+	--menu-item-padding-x: calc(var(--spacing) * 1.5);
+	--menu-item-padding-y: calc(var(--spacing) * 1);
+	--menu-checkbox-item-gap: calc(var(--spacing) * 1.5);
+	--menu-checkbox-item-radius: calc(var(--radius) * 0.8);
+	--menu-checkbox-item-padding-y: calc(var(--spacing) * 1);
+	--menu-radio-item-gap: calc(var(--spacing) * 1.5);
+	--menu-radio-item-radius: calc(var(--radius) * 0.8);
+	--menu-radio-item-padding-y: calc(var(--spacing) * 1);
+	--menu-label-padding-x: calc(var(--spacing) * 1.5);
+	--menu-label-padding-y: calc(var(--spacing) * 1);
+	--menu-separator-height: 1px;
+	--menu-sub-content-radius: var(--radius);
+	--menu-sub-content-padding: calc(var(--spacing) * 1);
+	/* Empty */
+	--empty-gap: calc(var(--spacing) * 4);
+	--empty-radius: calc(var(--radius) * 1.4);
+	--empty-padding: calc(var(--spacing) * 6);
+	--empty-header-gap: calc(var(--spacing) * 2);
+	--empty-media-icon-size: calc(var(--spacing) * 8);
+	--empty-media-icon-radius: var(--radius);
+	--empty-content-gap: calc(var(--spacing) * 2.5);
+	/* Marker */
+	--marker-gap: calc(var(--spacing) * 2);
+	--marker-icon-size: calc(var(--spacing) * 4);
+	/* Message Scroller */
+	--message-scroller-content-gap: calc(var(--spacing) * 6);
+	/* Message */
+	--message-gap: calc(var(--spacing) * 2);
+	--message-group-gap: calc(var(--spacing) * 2);
+	--message-avatar-radius: calc(infinity * 1px);
+	--message-content-gap: calc(var(--spacing) * 2.5);
+	--message-header-padding-x: calc(var(--spacing) * 3);
+	--message-footer-padding-x: calc(var(--spacing) * 3);
+	/* Bubble */
+	--bubble-gap: calc(var(--spacing) * 1);
+	--bubble-group-gap: calc(var(--spacing) * 2);
+	--bubble-content-radius: calc(var(--radius) * 1.4);
+	--bubble-content-padding-x: calc(var(--spacing) * 3);
+	--bubble-content-padding-y: calc(var(--spacing) * 2);
+	--bubble-reactions-gap: calc(var(--spacing) * 1);
+	--bubble-reactions-radius: calc(infinity * 1px);
+	--bubble-reactions-padding-x: calc(var(--spacing) * 1.5);
+	--bubble-reactions-padding-y: calc(var(--spacing) * 0.5);
+	/* Attachment */
+	--attachment-radius: calc(var(--radius) * 1.4);
+	--attachment-gap: calc(var(--spacing) * 2);
+	--attachment-sm-gap: calc(var(--spacing) * 2);
+	--attachment-xs-gap: calc(var(--spacing) * 1.5);
+	--attachment-xs-radius: var(--radius);
+	--attachment-media-radius: var(--radius);
+	--attachment-group-gap: calc(var(--spacing) * 2.5);
+	--attachment-group-padding-y: calc(var(--spacing) * 1);
+	/* Field */
+	--field-set-gap: calc(var(--spacing) * 4);
+	--field-group-gap: calc(var(--spacing) * 5);
+	--field-gap: calc(var(--spacing) * 2);
+	--field-content-gap: calc(var(--spacing) * 0.5);
+	--field-label-gap: calc(var(--spacing) * 2);
+	--field-title-gap: calc(var(--spacing) * 2);
+	--field-separator-height: calc(var(--spacing) * 5);
+	--field-separator-content-padding-x: calc(var(--spacing) * 2);
+	/* Hover Card */
+	--hover-card-content-radius: var(--radius);
+	--hover-card-content-padding: calc(var(--spacing) * 2.5);
+	/* Input */
+	--input-height: calc(var(--spacing) * 8);
+	--input-radius: var(--radius);
+	--input-padding-x: calc(var(--spacing) * 2.5);
+	--input-padding-y: calc(var(--spacing) * 1);
+	/* Input OTP */
+	--input-otp-gap: calc(var(--spacing) * 2);
+	--input-otp-group-radius: var(--radius);
+	--input-otp-slot-size: calc(var(--spacing) * 8);
+	--input-otp-caret-line-height: calc(var(--spacing) * 4);
+	/* Item */
+	--item-radius: var(--radius);
+	--item-gap: calc(var(--spacing) * 2.5);
+	--item-padding-x: calc(var(--spacing) * 3);
+	--item-padding-y: calc(var(--spacing) * 2.5);
+	--item-sm-gap: calc(var(--spacing) * 2.5);
+	--item-sm-padding-x: calc(var(--spacing) * 3);
+	--item-sm-padding-y: calc(var(--spacing) * 2.5);
+	--item-xs-gap: calc(var(--spacing) * 2);
+	--item-xs-padding-x: calc(var(--spacing) * 2.5);
+	--item-xs-padding-y: calc(var(--spacing) * 2);
+	--item-media-gap: calc(var(--spacing) * 2);
+	--item-media-image-size: calc(var(--spacing) * 10);
+	--item-media-image-radius: calc(var(--radius) * 0.6);
+	--item-content-gap: calc(var(--spacing) * 1);
+	--item-title-gap: calc(var(--spacing) * 2);
+	--item-actions-gap: calc(var(--spacing) * 2);
+	--item-header-gap: calc(var(--spacing) * 2);
+	--item-footer-gap: calc(var(--spacing) * 2);
+	--item-group-gap: calc(var(--spacing) * 4);
+	/* Kbd */
+	--kbd-height: calc(var(--spacing) * 5);
+	--kbd-gap: calc(var(--spacing) * 1);
+	--kbd-radius: calc(var(--radius) * 0.6);
+	--kbd-padding-x: calc(var(--spacing) * 1);
+	--kbd-group-gap: calc(var(--spacing) * 1);
+	/* Label */
+	--label-gap: calc(var(--spacing) * 2);
+	/* Menubar */
+	--menubar-height: calc(var(--spacing) * 8);
+	--menubar-gap: calc(var(--spacing) * 0.5);
+	--menubar-radius: var(--radius);
+	--menubar-trigger-radius: calc(var(--radius) * 0.6);
+	--menubar-trigger-padding-x: calc(var(--spacing) * 1.5);
+	/* Navigation Menu */
+	--navigation-menu-list-gap: calc(var(--spacing) * 0);
+	--navigation-menu-trigger-radius: var(--radius);
+	--navigation-menu-trigger-padding-x: calc(var(--spacing) * 2.5);
+	--navigation-menu-trigger-padding-y: calc(var(--spacing) * 1.5);
+	--navigation-menu-link-gap: calc(var(--spacing) * 2);
+	--navigation-menu-link-radius: var(--radius);
+	--navigation-menu-link-padding: calc(var(--spacing) * 2);
+	--navigation-menu-trigger-icon-size: calc(var(--spacing) * 3);
+	--navigation-menu-popup-radius: var(--radius);
+	/* Native Select */
+	--native-select-height: calc(var(--spacing) * 8);
+	--native-select-radius: var(--radius);
+	--native-select-padding-y: calc(var(--spacing) * 1);
+	/* Pagination */
+	--pagination-content-gap: calc(var(--spacing) * 0.5);
+	--pagination-ellipsis-size: calc(var(--spacing) * 8);
+	/* Popover */
+	--popover-content-gap: calc(var(--spacing) * 2.5);
+	--popover-content-radius: var(--radius);
+	--popover-content-padding: calc(var(--spacing) * 2.5);
+	--popover-header-gap: calc(var(--spacing) * 0.5);
+	/* Progress */
+	--progress-height: calc(var(--spacing) * 1);
+	--progress-radius: calc(infinity * 1px);
+	--progress-track-height: calc(var(--spacing) * 1);
+	--progress-track-radius: calc(infinity * 1px);
+	/* Questionnaire */
+	--questionnaire-gap: calc(var(--spacing) * 4);
+	--questionnaire-item-gap: calc(var(--spacing) * 4);
+	--questionnaire-choices-gap: calc(var(--spacing) * 2);
+	--questionnaire-choice-gap: calc(var(--spacing) * 2.5);
+	--questionnaire-choice-radius: var(--radius);
+	--questionnaire-choice-padding-x: calc(var(--spacing) * 3);
+	--questionnaire-choice-padding-y: calc(var(--spacing) * 2.5);
+	--questionnaire-choice-indicator-size: calc(var(--spacing) * 4);
+	--questionnaire-choice-indicator-dot-size: calc(var(--spacing) * 2);
+	--questionnaire-choice-indicator-dot-radius: calc(infinity * 1px);
+	--questionnaire-choice-content-gap: calc(var(--spacing) * 0.5);
+	--questionnaire-shortcut-size: calc(var(--spacing) * 5);
+	--questionnaire-shortcut-radius: calc(var(--radius) * 0.8);
+	--questionnaire-input-height: calc(var(--spacing) * 8);
+	--questionnaire-input-radius: var(--radius);
+	--questionnaire-input-padding-x: calc(var(--spacing) * 2.5);
+	--questionnaire-input-padding-y: calc(var(--spacing) * 1);
+	--questionnaire-actions-min-height: calc(var(--spacing) * 11);
+	--questionnaire-actions-gap: calc(var(--spacing) * 2);
+	/* Radio Group */
+	--radio-group-gap: calc(var(--spacing) * 2);
+	--radio-group-item-size: calc(var(--spacing) * 4);
+	--radio-group-item-radius: calc(infinity * 1px);
+	--radio-group-indicator-size: calc(var(--spacing) * 4);
+	--radio-group-indicator-icon-size: calc(var(--spacing) * 2);
+	--radio-group-indicator-icon-radius: calc(infinity * 1px);
+	/* Resizable */
+	--resizable-handle-icon-height: calc(var(--spacing) * 6);
+	--resizable-handle-icon-radius: var(--radius);
+	/* Scroll Area */
+	--scroll-area-radius: calc(var(--radius) * 0.8);
+	/* Select */
+	--select-trigger-gap: calc(var(--spacing) * 1.5);
+	--select-trigger-radius: var(--radius);
+	--select-trigger-padding-y: calc(var(--spacing) * 2);
+	--select-placeholder-gap: calc(var(--spacing) * 2);
+	--select-values-content-gap: calc(var(--spacing) * 2);
+	/* Separator */
+	--separator-horizontal-height: 1px;
+	/* Sheet */
+	--sheet-content-gap: calc(var(--spacing) * 4);
+	--sheet-header-gap: calc(var(--spacing) * 0.5);
+	--sheet-header-padding: calc(var(--spacing) * 4);
+	--sheet-footer-gap: calc(var(--spacing) * 2);
+	--sheet-footer-padding: calc(var(--spacing) * 4);
+	/* Sidebar */
+	--sidebar-input-height: calc(var(--spacing) * 8);
+	--sidebar-header-gap: calc(var(--spacing) * 2);
+	--sidebar-header-padding: calc(var(--spacing) * 2);
+	--sidebar-content-gap: calc(var(--spacing) * 0);
+	--sidebar-footer-gap: calc(var(--spacing) * 2);
+	--sidebar-footer-padding: calc(var(--spacing) * 2);
+	--sidebar-group-padding: calc(var(--spacing) * 2);
+	--sidebar-menu-gap: calc(var(--spacing) * 0);
+	--sidebar-group-label-height: calc(var(--spacing) * 8);
+	--sidebar-group-label-radius: calc(var(--radius) * 0.8);
+	--sidebar-group-label-padding-x: calc(var(--spacing) * 2);
+	--sidebar-group-action-radius: calc(var(--radius) * 0.8);
+	--sidebar-group-action-padding: calc(var(--spacing) * 0);
+	--sidebar-menu-button-gap: calc(var(--spacing) * 2);
+	--sidebar-menu-button-radius: calc(var(--radius) * 0.8);
+	--sidebar-menu-button-padding: calc(var(--spacing) * 2);
+	--sidebar-menu-button-height: calc(var(--spacing) * 8);
+	--sidebar-menu-button-sm-height: calc(var(--spacing) * 7);
+	--sidebar-menu-button-lg-height: calc(var(--spacing) * 12);
+	--sidebar-menu-action-radius: calc(var(--radius) * 0.8);
+	--sidebar-menu-action-padding: calc(var(--spacing) * 0);
+	--sidebar-menu-badge-height: calc(var(--spacing) * 5);
+	--sidebar-menu-badge-radius: calc(var(--radius) * 0.8);
+	--sidebar-menu-badge-padding-x: calc(var(--spacing) * 1);
+	--sidebar-menu-skeleton-height: calc(var(--spacing) * 8);
+	--sidebar-menu-skeleton-gap: calc(var(--spacing) * 2);
+	--sidebar-menu-skeleton-radius: calc(var(--radius) * 0.8);
+	--sidebar-menu-skeleton-padding-x: calc(var(--spacing) * 2);
+	--sidebar-menu-skeleton-icon-size: calc(var(--spacing) * 4);
+	--sidebar-menu-skeleton-icon-radius: calc(var(--radius) * 0.8);
+	--sidebar-menu-skeleton-text-height: calc(var(--spacing) * 4);
+	--sidebar-menu-sub-gap: calc(var(--spacing) * 1);
+	--sidebar-menu-sub-padding-x: calc(var(--spacing) * 2.5);
+	--sidebar-menu-sub-padding-y: calc(var(--spacing) * 0.5);
+	--sidebar-menu-sub-button-height: calc(var(--spacing) * 7);
+	--sidebar-menu-sub-button-gap: calc(var(--spacing) * 2);
+	--sidebar-menu-sub-button-radius: calc(var(--radius) * 0.8);
+	--sidebar-menu-sub-button-padding-x: calc(var(--spacing) * 2);
+	/* Skeleton */
+	--skeleton-radius: calc(var(--radius) * 0.8);
+	/* Slider */
+	--slider-track-radius: calc(infinity * 1px);
+	--slider-thumb-size: calc(var(--spacing) * 3);
+	--slider-thumb-radius: calc(infinity * 1px);
+	--slider-ticks-padding-x: calc(var(--spacing) * 1.5);
+	/* Switch */
+	--switch-radius: calc(infinity * 1px);
+	--switch-thumb-radius: calc(infinity * 1px);
+	/* Table */
+	--table-head-height: calc(var(--spacing) * 10);
+	--table-head-padding-x: calc(var(--spacing) * 2);
+	--table-cell-padding: calc(var(--spacing) * 2);
+	/* Tabs */
+	--tabs-gap: calc(var(--spacing) * 2);
+	--tabs-list-radius: var(--radius);
+	--tabs-trigger-gap: calc(var(--spacing) * 1.5);
+	--tabs-trigger-radius: calc(var(--radius) * 0.8);
+	--tabs-trigger-padding-x: calc(var(--spacing) * 1.5);
+	--tabs-trigger-padding-y: calc(var(--spacing) * 0.5);
+	/* Textarea */
+	--textarea-radius: var(--radius);
+	--textarea-padding-x: calc(var(--spacing) * 2.5);
+	--textarea-padding-y: calc(var(--spacing) * 2);
+	/* Toggle */
+	--toggle-gap: calc(var(--spacing) * 1);
+	--toggle-radius: var(--radius);
+	--toggle-height: calc(var(--spacing) * 8);
+	--toggle-padding-x: calc(var(--spacing) * 2.5);
+	--toggle-sm-height: calc(var(--spacing) * 7);
+	--toggle-sm-padding-x: calc(var(--spacing) * 2.5);
+	--toggle-lg-height: calc(var(--spacing) * 9);
+	--toggle-lg-padding-x: calc(var(--spacing) * 2.5);
+	/* Toggle Group */
+	--toggle-group-radius: var(--radius);
+	/* Tooltip */
+	--tooltip-content-radius: calc(var(--radius) * 0.8);
+	--tooltip-content-padding-x: calc(var(--spacing) * 3);
+	--tooltip-content-padding-y: calc(var(--spacing) * 1.5);
+	/* Trace */
+	--trace-gap: calc(var(--spacing) * 2);
+	--trace-collapsible-trigger-gap: calc(var(--spacing) * 1);
+	--trace-collapsible-trigger-radius: calc(var(--radius) * 0.8);
+	--trace-line-gap: calc(var(--spacing) * 2);
+	--trace-icon-size: calc(var(--spacing) * 4);
+	/* Input Group */
+	--input-group-height: calc(var(--spacing) * 8);
+	--input-group-radius: var(--radius);
+	--input-group-addon-gap: calc(var(--spacing) * 2);
+	--input-group-addon-padding-y: calc(var(--spacing) * 1.5);
+	--input-group-addon-align-block-start-padding-x: calc(var(--spacing) * 2.5);
+	--input-group-addon-align-block-end-padding-x: calc(var(--spacing) * 2.5);
+	--input-group-button-gap: calc(var(--spacing) * 2);
+	--input-group-button-xs-height: calc(var(--spacing) * 6);
+	--input-group-button-xs-gap: calc(var(--spacing) * 1);
+	--input-group-button-xs-padding-x: calc(var(--spacing) * 1.5);
+	--input-group-button-icon-xs-size: calc(var(--spacing) * 6);
+	--input-group-button-icon-xs-padding: calc(var(--spacing) * 0);
+	--input-group-button-icon-sm-size: calc(var(--spacing) * 8);
+	--input-group-button-icon-sm-padding: calc(var(--spacing) * 0);
+	--input-group-text-gap: calc(var(--spacing) * 2);
+	--input-group-input-radius: 0;
+	--input-group-textarea-radius: 0;
+	--input-group-textarea-padding-y: calc(var(--spacing) * 2);
+}
